@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Palette } from "lucide-react";
 
 
 export default function Hero() {
@@ -9,7 +9,6 @@ const whatsappLink =
 "https://wa.me/254795155158?text=Hello%20HMM%20Graphics,%20I%20would%20like%20to%20start%20a%20project";
 
 
-
 return (
 
 <section
@@ -17,20 +16,22 @@ return (
 id="home"
 
 className="
-min-h-screen
+min-h-[85vh]
+md:min-h-screen
 bg-black
 text-white
 flex
 items-center
-px-8
+px-6
 md:px-20
 overflow-hidden
 relative
+py-16
+md:py-0
 "
 
 
 >
-
 
 
 {/* MAIN CONTENT */}
@@ -49,12 +50,15 @@ transition={{duration:0.8}}
 >
 
 
+
 <div className="
 flex
 items-center
 gap-2
 text-cyan-400
 mb-5
+text-sm
+md:text-base
 ">
 
 
@@ -70,7 +74,8 @@ Creative Studio
 
 
 <h1 className="
-text-5xl
+text-4xl
+sm:text-5xl
 md:text-7xl
 font-bold
 leading-tight
@@ -103,11 +108,15 @@ Into Powerful Designs
 
 
 
+
 <p className="
-mt-8
+mt-6
+md:mt-8
 text-gray-300
 max-w-xl
-text-lg
+text-base
+md:text-lg
+leading-relaxed
 ">
 
 
@@ -117,7 +126,6 @@ motion graphics and premium visual identity.
 
 
 </p>
-
 
 
 
@@ -138,7 +146,8 @@ rel="noopener noreferrer"
 <button
 
 className="
-mt-10
+mt-8
+md:mt-10
 bg-cyan-400
 text-black
 px-7
@@ -166,6 +175,31 @@ Start Your Project
 
 
 </a>
+
+
+
+
+
+{/* MOBILE CREATIVE TAG */}
+
+<div className="
+mt-12
+lg:hidden
+flex
+items-center
+gap-3
+text-gray-400
+text-sm
+">
+
+
+<Palette size={18} className="text-cyan-400"/>
+
+
+Branding • Design • Motion Graphics
+
+
+</div>
 
 
 
@@ -210,6 +244,8 @@ h-96
 
 
 
+
+
 {/* ROTATING CIRCLE */}
 
 
@@ -247,8 +283,6 @@ rounded-full
 >
 
 </motion.div>
-
-
 
 
 
@@ -313,6 +347,7 @@ Creative Solutions
 
 
 
+
 <p className="
 text-gray-300
 mt-3
@@ -321,7 +356,9 @@ leading-relaxed
 
 
 Brand Identity • Media Production
+
 <br/>
+
 Training • Event Design
 
 
@@ -336,8 +373,9 @@ Training • Event Design
 
 
 
-
 </motion.div>
+
+
 
 
 
