@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Palette } from "lucide-react";
+import { ArrowRight, Sparkles, Palette, Layers, PenTool } from "lucide-react";
 
 
 export default function Hero() {
@@ -16,31 +16,68 @@ return (
 id="home"
 
 className="
-min-h-[70vh]
+min-h-[85vh]
 lg:min-h-screen
-bg-black
+bg-neutral-950
 text-white
 flex
 items-center
+relative
+overflow-hidden
 px-6
 md:px-20
-py-10
-lg:py-0
-overflow-hidden
-relative
 "
 
 
 >
 
 
+{/* BACKGROUND GLOW */}
+
+<div className="
+absolute
+right-[-150px]
+top-20
+w-[500px]
+h-[500px]
+bg-cyan-400/20
+blur-[140px]
+rounded-full
+">
+</div>
+
+
+
+<div className="
+absolute
+left-[-150px]
+bottom-0
+w-[350px]
+h-[350px]
+bg-cyan-400/10
+blur-[120px]
+rounded-full
+">
+</div>
+
+
+
+
+
+
+
 {/* MAIN CONTENT */}
 
 <div className="
-max-w-6xl
-z-10
+max-w-7xl
 w-full
+z-10
+grid
+lg:grid-cols-2
+gap-10
+items-center
 ">
+
 
 
 <motion.div
@@ -55,20 +92,22 @@ transition={{duration:0.8}}
 
 
 
+
 <div className="
 flex
 items-center
 gap-2
 text-cyan-400
-mb-4
+uppercase
+tracking-widest
 text-sm
-md:text-base
+mb-6
 ">
 
 
-<Sparkles size={20}/>
+<Sparkles size={18}/>
 
-Creative Studio
+Creative Design Studio
 
 
 </div>
@@ -77,16 +116,18 @@ Creative Studio
 
 
 
+
 <h1 className="
-text-4xl
-sm:text-5xl
-md:text-7xl
-font-bold
-leading-tight
+text-5xl
+sm:text-6xl
+lg:text-8xl
+font-extrabold
+leading-[0.95]
+tracking-tight
 ">
 
 
-HMM Graphics
+We Build
 
 
 <br/>
@@ -94,7 +135,7 @@ HMM Graphics
 
 <span className="text-cyan-400">
 
-Turning Ideas
+Brands
 
 </span>
 
@@ -102,7 +143,7 @@ Turning Ideas
 <br/>
 
 
-Into Powerful Designs
+That Speak
 
 
 </h1>
@@ -112,24 +153,22 @@ Into Powerful Designs
 
 
 
-
 <p className="
-mt-5
-md:mt-8
+mt-8
 text-gray-300
 max-w-xl
-text-base
-md:text-lg
+text-lg
 leading-relaxed
 ">
 
 
-Professional branding, logos, posters,
-social media graphics, event branding,
-motion graphics and premium visual identity.
+HMM Graphics creates powerful visual identities,
+digital experiences and creative solutions that help
+brands, businesses and organizations stand out.
 
 
 </p>
+
 
 
 
@@ -151,17 +190,16 @@ rel="noopener noreferrer"
 <button
 
 className="
-mt-7
-md:mt-10
+mt-10
 bg-cyan-400
 text-black
-px-7
-py-3
+px-8
+py-4
 rounded-full
-font-semibold
+font-bold
 flex
 items-center
-gap-2
+gap-3
 hover:scale-105
 transition
 "
@@ -173,7 +211,7 @@ transition
 Start Your Project
 
 
-<ArrowRight size={18}/>
+<ArrowRight size={20}/>
 
 
 </button>
@@ -186,14 +224,11 @@ Start Your Project
 
 
 
-{/* MOBILE CREATIVE TAG */}
 
 <div className="
-mt-8
-lg:hidden
+mt-10
 flex
-items-center
-gap-3
+gap-4
 text-gray-400
 text-sm
 ">
@@ -201,8 +236,17 @@ text-sm
 
 <Palette size={18} className="text-cyan-400"/>
 
+Branding
 
-Branding • Design • Motion Graphics
+
+<PenTool size={18} className="text-cyan-400"/>
+
+Design
+
+
+<Layers size={18} className="text-cyan-400"/>
+
+Media
 
 
 </div>
@@ -215,7 +259,6 @@ Branding • Design • Motion Graphics
 </motion.div>
 
 
-</div>
 
 
 
@@ -223,126 +266,96 @@ Branding • Design • Motion Graphics
 
 
 
+{/* CREATIVE VISUAL SIDE */}
 
-
-{/* FLOATING DESIGN AREA */}
 
 <motion.div
 
-initial={{opacity:0,x:100}}
+initial={{opacity:0,x:80}}
 
 animate={{opacity:1,x:0}}
 
 transition={{duration:1}}
 
-
 className="
+relative
 hidden
 lg:block
-absolute
-right-24
-top-32
-w-96
-h-96
+h-[500px]
 "
-
 
 >
 
 
 
+{/* MAIN GLASS CARD */}
 
-
-{/* ROTATING CIRCLE */}
 
 <motion.div
 
 animate={{
 
-rotate:360
+y:[0,-20,0]
 
 }}
 
 transition={{
 
-duration:15,
-
-repeat:Infinity,
-
-ease:"linear"
-
-}}
-
-
-className="
-absolute
-top-0
-right-0
-w-80
-h-80
-border
-border-cyan-400/30
-rounded-full
-"
-
-
->
-
-</motion.div>
-
-
-
-
-
-
-
-
-
-{/* GLASS CARD */}
-
-
-<motion.div
-
-
-animate={{
-
-y:[0,-15,0]
-
-}}
-
-
-transition={{
-
-duration:4,
+duration:5,
 
 repeat:Infinity
 
 }}
 
-
-
 className="
 absolute
-right-0
-bottom-0
+right-10
+top-20
+w-96
 bg-white/5
-backdrop-blur-md
+backdrop-blur-xl
 border
 border-white/10
+rounded-3xl
 p-8
-rounded-2xl
-w-80
-shadow-xl
+shadow-2xl
 "
 
 
 >
 
 
-<h3 className="
-text-xl
+<div className="
+h-56
+rounded-2xl
+bg-gradient-to-br
+from-cyan-400/30
+to-transparent
+flex
+items-center
+justify-center
+">
+
+
+<h2 className="
+text-5xl
 font-bold
-text-cyan-400
+">
+
+HMM
+
+</h2>
+
+
+</div>
+
+
+
+
+<h3 className="
+text-2xl
+font-bold
+mt-6
 ">
 
 
@@ -353,22 +366,15 @@ Creative Solutions
 
 
 
-
-
-
-
 <p className="
-text-gray-300
+text-gray-400
 mt-3
-leading-relaxed
 ">
 
 
-Brand Identity • Media Production
-
+Brand Identity • Motion Graphics
 <br/>
-
-Training • Event Design
+Digital Media • Training
 
 
 </p>
@@ -383,11 +389,70 @@ Training • Event Design
 
 
 
+
+{/* FLOATING TAG */}
+
+<motion.div
+
+animate={{
+
+rotate:360
+
+}}
+
+transition={{
+
+duration:20,
+
+repeat:Infinity,
+
+ease:"linear"
+
+}}
+
+className="
+absolute
+right-0
+bottom-20
+w-28
+h-28
+rounded-full
+border
+border-cyan-400/40
+flex
+items-center
+justify-center
+text-xs
+text-cyan-400
+"
+
+
+>
+
+
+Creative
+
+
+<br/>
+
+Studio
+
+
 </motion.div>
 
 
 
 
+
+
+</motion.div>
+
+
+
+
+
+
+</div>
 
 
 
