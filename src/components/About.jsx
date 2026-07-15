@@ -19,8 +19,10 @@ id="about"
 className="
 bg-black
 text-white
-py-24
-px-8
+py-14
+lg:py-24
+px-6
+md:px-8
 "
 
 
@@ -46,17 +48,22 @@ viewport={{once:true}}
 
 
 
+
 {/* Heading */}
 
-
-<div className="text-center mb-16">
+<div className="
+text-center
+mb-10
+lg:mb-16
+">
 
 
 <h2 className="
-text-5xl
+text-3xl
+md:text-5xl
 font-bold
 text-cyan-400
-mb-6
+mb-4
 ">
 
 
@@ -68,7 +75,8 @@ About HMM Graphics
 
 
 <p className="
-text-xl
+text-base
+md:text-xl
 text-gray-300
 max-w-3xl
 mx-auto
@@ -93,7 +101,13 @@ through creativity, technology and innovation.
 
 
 
-<div className="grid md:grid-cols-2 gap-12 items-center">
+<div className="
+grid
+md:grid-cols-2
+gap-8
+lg:gap-12
+items-center
+">
 
 
 
@@ -108,9 +122,10 @@ through creativity, technology and innovation.
 
 
 <h3 className="
-text-3xl
+text-2xl
+md:text-3xl
 font-bold
-mb-6
+mb-5
 ">
 
 
@@ -125,7 +140,7 @@ Creative Solutions That Communicate Vision
 <p className="
 text-gray-300
 leading-relaxed
-mb-6
+mb-5
 ">
 
 
@@ -165,11 +180,10 @@ ideas into designs that inspire, connect and create impact.
 
 
 
-
 {/* Creative Values */}
 
 
-<div className="grid gap-6">
+<div className="grid gap-5">
 
 
 
@@ -177,17 +191,17 @@ ideas into designs that inspire, connect and create impact.
 
 <div className="
 bg-slate-900
-p-6
+p-5
 rounded-2xl
 border
 border-cyan-400/20
 ">
 
 
-<Palette className="text-cyan-400 mb-4"/>
+<Palette className="text-cyan-400 mb-3"/>
 
 
-<h4 className="text-xl font-bold">
+<h4 className="text-lg font-bold">
 
 Creative Excellence
 
@@ -210,20 +224,19 @@ strategy and attention to detail.
 
 
 
-
 <div className="
 bg-slate-900
-p-6
+p-5
 rounded-2xl
 border
 border-cyan-400/20
 ">
 
 
-<Lightbulb className="text-cyan-400 mb-4"/>
+<Lightbulb className="text-cyan-400 mb-3"/>
 
 
-<h4 className="text-xl font-bold">
+<h4 className="text-lg font-bold">
 
 Vision Driven
 
@@ -249,17 +262,17 @@ meaningful visual identities.
 
 <div className="
 bg-slate-900
-p-6
+p-5
 rounded-2xl
 border
 border-cyan-400/20
 ">
 
 
-<Users className="text-cyan-400 mb-4"/>
+<Users className="text-cyan-400 mb-3"/>
 
 
-<h4 className="text-xl font-bold">
+<h4 className="text-lg font-bold">
 
 Empowering Creatives
 
@@ -304,28 +317,37 @@ generation of designers.
 
 
 <div className="
-mt-16
+mt-10
+lg:mt-16
 bg-slate-900
 rounded-2xl
-p-8
+p-6
+lg:p-8
 text-center
 border
 border-cyan-400/20
 ">
 
 
-<Rocket className="
+<Rocket
+
+className="
 text-cyan-400
 mx-auto
 mb-4
 "
+
 size={35}
+
 />
 
 
 
+
+
 <h3 className="
-text-2xl
+text-xl
+md:text-2xl
 font-bold
 ">
 
@@ -337,7 +359,10 @@ Design • Branding • Media • Training
 
 
 
-<p className="text-gray-400 mt-3">
+<p className="
+text-gray-400
+mt-3
+">
 
 
 Creating visual excellence through creativity
@@ -349,7 +374,6 @@ and innovation.
 
 
 </div>
-
 
 
 
