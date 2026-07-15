@@ -12,28 +12,28 @@ const projects = [
 
 {
 image: warrior,
-title: "Warriors Night",
-category: "Event Branding",
+title:"Warriors Night",
+category:"Event Branding",
 description:
-"Complete event branding experience including promotional posters, digital campaigns and visual identity for a worship gathering."
+"Complete visual identity including posters, digital campaigns and promotional designs created for a worship experience."
 },
 
 
 {
-image: youth,
-title: "Royal Youth Kesha",
-category: "Church & Ministry",
+image:youth,
+title:"Royal Youth Kesha",
+category:"Ministry Branding",
 description:
-"Youth conference branding designed to communicate energy, purpose and a strong ministry identity."
+"A youthful and energetic brand experience designed to communicate purpose, passion and community."
 },
 
 
 {
-image: prophetic,
-title: "Prophetic Service",
-category: "Digital Media",
+image:prophetic,
+title:"Prophetic Service",
+category:"Digital Campaign",
 description:
-"Social media campaign design created to enhance communication, engagement and online presence."
+"Social media visuals and digital assets designed to increase engagement and strengthen online communication."
 }
 
 ];
@@ -47,16 +47,41 @@ return (
 id="portfolio"
 
 className="
-bg-slate-900
-py-24
-px-8
+bg-neutral-950
+text-white
+py-16
+lg:py-28
+px-6
+md:px-8
+relative
+overflow-hidden
 "
 
 
 >
 
 
-<div className="max-w-7xl mx-auto">
+{/* Background Glow */}
+
+<div className="
+absolute
+right-0
+top-20
+w-[400px]
+h-[400px]
+bg-cyan-400/10
+blur-[120px]
+rounded-full
+">
+</div>
+
+
+
+
+
+<div className="max-w-7xl mx-auto relative z-10">
+
+
 
 
 
@@ -75,38 +100,68 @@ viewport={{once:true}}
 
 
 
-<div className="text-center mb-14">
 
 
-<h2 className="
-text-5xl
-font-bold
-text-white
-mb-5
+
+{/* HEADER */}
+
+
+<div className="
+mb-12
+lg:mb-16
 ">
 
 
-Featured Creative Work
+<p className="
+text-cyan-400
+uppercase
+tracking-widest
+text-sm
+mb-4
+">
+
+
+Selected Works
+
+
+</p>
+
+
+
+<h2 className="
+text-4xl
+md:text-6xl
+font-extrabold
+leading-tight
+">
+
+
+Creative Projects
+<br/>
+
+That Tell Stories
 
 
 </h2>
 
 
 
+
 <p className="
 text-gray-400
 max-w-3xl
-mx-auto
+mt-6
 text-lg
 ">
 
 
-Explore selected projects by HMM Graphics —
-from event branding and ministry visuals
-to digital campaigns and creative identity solutions.
+A collection of branding, ministry visuals,
+event experiences and digital campaigns
+created by HMM Graphics.
 
 
 </p>
+
 
 
 </div>
@@ -117,15 +172,16 @@ to digital campaigns and creative identity solutions.
 
 
 
-{/* Categories */}
+
+
+{/* FILTER BUTTONS */}
 
 
 <div className="
 flex
-justify-center
 flex-wrap
-gap-4
-mb-14
+gap-3
+mb-12
 ">
 
 
@@ -134,10 +190,10 @@ mb-14
 [
 "All",
 "Brand Identity",
-"Church & Ministry",
 "Events",
+"Ministry",
 "Social Media",
-"Motion Graphics"
+"Motion"
 
 ].map((item,index)=>(
 
@@ -151,17 +207,20 @@ px-5
 py-2
 rounded-full
 border
-border-cyan-400/40
-text-white
-hover:bg-cyan-400
-hover:text-black
+border-white/10
+bg-white/5
+text-gray-300
+hover:border-cyan-400
+hover:text-cyan-400
 transition
 "
 
 
 >
 
+
 {item}
+
 
 </button>
 
@@ -172,6 +231,7 @@ transition
 }
 
 
+
 </div>
 
 
@@ -180,7 +240,9 @@ transition
 
 
 
-{/* Projects */}
+
+
+{/* PROJECT GRID */}
 
 
 <div className="
@@ -188,6 +250,8 @@ grid
 md:grid-cols-3
 gap-8
 ">
+
+
 
 
 
@@ -204,40 +268,48 @@ key={index}
 
 
 initial={{
+
 opacity:0,
+
 y:50
+
 }}
 
 
 whileInView={{
+
 opacity:1,
+
 y:0
+
 }}
 
 
 transition={{
+
 duration:0.6,
-delay:index*0.2
+
+delay:index*0.15
+
 }}
 
 
-viewport={{
-once:true
-}}
+viewport={{once:true}}
 
 
 
 className="
-bg-slate-800
-rounded-2xl
-overflow-hidden
-shadow-xl
+group
+bg-white/5
+backdrop-blur-xl
 border
-border-white/5
-hover:border-cyan-400
+border-white/10
+rounded-3xl
+overflow-hidden
+hover:border-cyan-400/50
 hover:-translate-y-3
 transition
-duration-300
+duration-500
 "
 
 
@@ -247,7 +319,14 @@ duration-300
 
 
 
-<div className="overflow-hidden">
+
+{/* IMAGE */}
+
+
+<div className="
+relative
+overflow-hidden
+">
 
 
 <img
@@ -258,14 +337,28 @@ alt={project.title}
 
 className="
 w-full
-h-72
+h-80
 object-cover
-hover:scale-110
+group-hover:scale-110
 transition
-duration-500
+duration-700
 "
 
+
 />
+
+
+
+
+<div className="
+absolute
+inset-0
+bg-black/20
+group-hover:bg-black/40
+transition
+">
+</div>
+
 
 
 </div>
@@ -277,27 +370,34 @@ duration-500
 
 
 
-<div className="p-6">
+
+{/* CONTENT */}
 
 
-<span className="
+<div className="
+p-7
+">
+
+
+<p className="
 text-cyan-400
 text-sm
 font-semibold
+uppercase
+tracking-wide
 ">
 
 
 {project.category}
 
 
-</span>
+</p>
 
 
 
 
 
 <h3 className="
-text-white
 text-2xl
 font-bold
 mt-3
@@ -313,9 +413,10 @@ mt-3
 
 
 
+
 <p className="
 text-gray-400
-mt-3
+mt-4
 leading-relaxed
 ">
 
@@ -347,8 +448,7 @@ hover:underline
 >
 
 
-Discuss Similar Project →
-
+Start Similar Project →
 
 </a>
 
@@ -362,8 +462,10 @@ Discuss Similar Project →
 
 
 
-</motion.div>
 
+
+
+</motion.div>
 
 
 ))
@@ -374,7 +476,11 @@ Discuss Similar Project →
 
 
 
+
 </div>
+
+
+
 
 
 
@@ -384,11 +490,16 @@ Discuss Similar Project →
 
 
 
+
+
 </div>
 
 
 
+
+
 </section>
+
 
 );
 
