@@ -16,18 +16,18 @@ return (
 id="home"
 
 className="
-min-h-[85vh]
-md:min-h-screen
+min-h-[70vh]
+lg:min-h-screen
 bg-black
 text-white
 flex
 items-center
 px-6
 md:px-20
+py-10
+lg:py-0
 overflow-hidden
 relative
-py-16
-md:py-0
 "
 
 
@@ -36,7 +36,11 @@ md:py-0
 
 {/* MAIN CONTENT */}
 
-<div className="max-w-6xl z-10">
+<div className="
+max-w-6xl
+z-10
+w-full
+">
 
 
 <motion.div
@@ -56,7 +60,7 @@ flex
 items-center
 gap-2
 text-cyan-400
-mb-5
+mb-4
 text-sm
 md:text-base
 ">
@@ -110,7 +114,7 @@ Into Powerful Designs
 
 
 <p className="
-mt-6
+mt-5
 md:mt-8
 text-gray-300
 max-w-xl
@@ -132,6 +136,7 @@ motion graphics and premium visual identity.
 
 
 
+
 <a
 
 href={whatsappLink}
@@ -146,7 +151,7 @@ rel="noopener noreferrer"
 <button
 
 className="
-mt-8
+mt-7
 md:mt-10
 bg-cyan-400
 text-black
@@ -180,10 +185,11 @@ Start Your Project
 
 
 
+
 {/* MOBILE CREATIVE TAG */}
 
 <div className="
-mt-12
+mt-8
 lg:hidden
 flex
 items-center
@@ -200,6 +206,7 @@ Branding • Design • Motion Graphics
 
 
 </div>
+
 
 
 
@@ -248,7 +255,6 @@ h-96
 
 {/* ROTATING CIRCLE */}
 
-
 <motion.div
 
 animate={{
@@ -283,6 +289,8 @@ rounded-full
 >
 
 </motion.div>
+
+
 
 
 
@@ -348,6 +356,7 @@ Creative Solutions
 
 
 
+
 <p className="
 text-gray-300
 mt-3
@@ -367,6 +376,7 @@ Training • Event Design
 
 
 </motion.div>
+
 
 
 
